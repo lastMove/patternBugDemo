@@ -28,7 +28,7 @@ class ViewController: UIViewController {
         
         var firstColor = UIColor(patternImage: UIImage(named:"stars1")!).CGColor;
         addAnim(view2,
-            colors: [firstColor]);
+            colors: [firstColor, firstColor, firstColor]);
     }
     
     func addAnim(view:UIView, colors:[CGColor])
