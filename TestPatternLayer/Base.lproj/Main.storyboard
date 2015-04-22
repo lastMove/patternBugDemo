@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="TestPatternLayer" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -15,8 +15,70 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zfu-kz-IiR" userLabel="View1">
+                                <rect key="frame" x="250" y="307" width="100" height="100"/>
+                                <color key="backgroundColor" red="0.739216148853302" green="0.79726707935333252" blue="0.24909913539886475" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="T6G-Gu-d7e"/>
+                                    <constraint firstAttribute="width" constant="100" id="leA-gq-4An"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ne3-jk-ixB" userLabel="View2">
+                                <rect key="frame" x="250" y="417" width="100" height="100"/>
+                                <color key="backgroundColor" red="0.86561024190000002" green="0.0" blue="0.2480099499" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="EL9-Ln-ZKH"/>
+                                    <constraint firstAttribute="width" constant="100" id="tcP-jH-s9r"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sfI-2E-drK">
+                                <rect key="frame" x="210" y="562" width="182" height="30"/>
+                                <state key="normal" title="Anim second view(images)">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="animSecondView:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="pWm-KQ-UgD"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pLi-SY-tTb">
+                                <rect key="frame" x="250" y="530" width="100" height="30"/>
+                                <state key="normal" title="Anim first view">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="animFirstView:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="h5F-n7-sgn"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Zfu-kz-IiR" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="37" id="LQL-gE-Cz2"/>
+                            <constraint firstItem="Ne3-jk-ixB" firstAttribute="top" secondItem="Zfu-kz-IiR" secondAttribute="bottom" constant="10" id="MCa-S9-PRu"/>
+                            <constraint firstAttribute="centerX" secondItem="Zfu-kz-IiR" secondAttribute="centerX" id="SGk-AK-bUi"/>
+                            <constraint firstItem="Zfu-kz-IiR" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="Wog-WP-3gb"/>
+                            <constraint firstAttribute="trailing" secondItem="Zfu-kz-IiR" secondAttribute="trailing" id="X9d-mh-x4y"/>
+                            <constraint firstAttribute="centerX" secondItem="Ne3-jk-ixB" secondAttribute="centerX" id="dR0-Q3-glV"/>
+                            <constraint firstItem="pLi-SY-tTb" firstAttribute="top" secondItem="Ne3-jk-ixB" secondAttribute="bottom" constant="13" id="db3-75-Kk0"/>
+                            <constraint firstAttribute="centerY" secondItem="Zfu-kz-IiR" secondAttribute="centerY" constant="-57" id="jlV-yg-z7Z"/>
+                            <constraint firstItem="sfI-2E-drK" firstAttribute="centerX" secondItem="pLi-SY-tTb" secondAttribute="centerX" id="lmx-Et-CyN"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="Zfu-kz-IiR" secondAttribute="bottom" constant="-57" id="s6y-dG-Axr"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="sfI-2E-drK" secondAttribute="bottom" constant="8" symbolic="YES" id="vRM-l9-3sn"/>
+                            <constraint firstItem="pLi-SY-tTb" firstAttribute="leading" secondItem="Ne3-jk-ixB" secondAttribute="leading" id="zFG-JO-NQX"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="LQL-gE-Cz2"/>
+                                <exclude reference="Wog-WP-3gb"/>
+                                <exclude reference="X9d-mh-x4y"/>
+                                <exclude reference="s6y-dG-Axr"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="view1" destination="Zfu-kz-IiR" id="KXk-sa-GCE"/>
+                        <outlet property="view2" destination="Ne3-jk-ixB" id="tuo-f6-4W4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
